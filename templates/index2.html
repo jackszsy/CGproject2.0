@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% import "bootstrap/wtf.html" as wtf %}
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AnimeLover</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='index.js') }}">
+        <script type="text/javascript" src="eel.js"></script>
+
+        {#<script src="json/data.JS"></script>#}
+        <script src="{{ url_for('static',filename='JSON/data.js') }}"></script>
+        <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+
+        {#<script src="JS/index.JS"></script>#}
+        <script src="{{ url_for('static',filename='JS/index.js') }}"></script>
+    {% endblock %}
+</head>
+
+<div class="boxtop">
+    <div class="left" style="background: lightpink; font-size: 40px; width: 34%;line-height: 65px;height: 65px">
+        <img class="topbarimage" src="{{ url_for('static',filename='images/topimg.png') }}" height="60px";position = "relative;top:5px">
+        AnimeLover</div>
+    <div class="center" style="width:56%; background-color: lightpink;font-size: 30px;line-height: 65px;font-family: 'Arial Narrow'; color: whitesmoke;text-align: right">
+         <img class="topbarimage" src="{{ url_for('static',filename='images/user.png') }}" ;height=60px ;width = 60px; position = "relative;top:5px">
+        User</div>
+    <div class="right" style="width: 8%;background-color: lightpink"></div>
+</div>
+<div class = "recommendation" style="font-size:55px; font-family: 'Arial Narrow';text-align: center;color: lightseagreen">Find You Want!!!</div>
+<body>
+{% block body %}
+  <div class="box">
+    <div class="box-img">
+      <div class="right-icon" id="icon"></div>
+      <div class="main"></a></div>
+      <div class="imgname">
+        <span id="imgName">111.png</span>
+      </div>
+      <div class="tip"><span id="check">1</span>/<span id="total">20</span></div>
+    </div>
+    <ul class="box-buttons">
+      <li><span id="link">Like</span></li><li><span id="next">next</span></li>
+    </ul>
+
+    <div class="props">
+      <div class="props-main">
+        <div class="props-val" id="propsVal"></div>
+      </div>
+      <div class="props-page"><span id="currlink"></span>/<span id="totallink"></span></div>
+    </div>
+  </div>
+{% endblock %}
+</body>
+</html>

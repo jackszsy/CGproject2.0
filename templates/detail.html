@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    AnimeLover
+
+{% endblock %}
+
+{% block page_content %}
+    <form class="form" method="post">
+        {{ wtf.form_field(form.back) }}
+    </form>
+    <p>
+        title:{{ title }}
+    </p>
+    <p>
+        <img src={{ image_url }} alt="">
+    </p>
+    <p>
+        synopsis:{{ synopsis }}
+    </p>
+    <p>
+        type:{{ type }}
+    </p>
+    <p>
+        episodes:{{ episodes }}
+    </p>
+    <p>
+        score:{{ score }}
+    </p>
+    <p>
+        start_date:{{ start_date }}
+    </p>
+    <P>
+        end_date:{{ end_date }}
+    </P>
+    <P>
+        rated:{{ rated }}
+    </P>
+    <P>
+        members:{{ members }}
+    </P>
+{% endblock %}

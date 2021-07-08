@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}AnimeLover{% endblock %}
+
+{% block page_content %}
+    <p>
+        <form class="form" method="POST">
+            <img src={{ image_url1 }} >
+            {{ wtf.form_field(form.go1) }}
+            <img src={{ image_url2 }} >
+            {{ wtf.form_field(form.go2) }}
+            <img src={{ image_url3 }} >
+            {{ wtf.form_field(form.go3) }}
+            <img src={{ image_url4 }} >
+            {{ wtf.form_field(form.go4) }}
+            <img src={{ image_url5 }} >
+            {{ wtf.form_field(form.go5) }}
+        </form>
+    </p>
+{% endblock %}
